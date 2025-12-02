@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
+
 const Sidebar = () => {
     const pathname = usePathname();
   return (
@@ -14,7 +15,7 @@ const Sidebar = () => {
            {sidebarLinks.map((link) => {
   const isActive =
     link.route === '/'
-      ? pathname === '/' // home active ONLY on exact "/"
+      ? pathname === '/' 
       : pathname === link.route || pathname.startsWith(`${link.route}/`);
                 return (
                     <Link
